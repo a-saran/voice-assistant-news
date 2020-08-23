@@ -9,14 +9,17 @@ const alanKey =
 
 const App = () => {
   const [newsArticles, setNewsArticles] = useState([]);
+  const [activeArticle, setActiveArticle] = useState(-1);
 
   useEffect(() => {
     alanBtn({
       key: alanKey,
       onCommand: ({ command, articles }) => {
         if (command === "newHeadlines") {
-          console.log(articles);
+          setActiveArticle(-1);
           setNewsArticles(articles);
+        } else if (command === "highlight") {
+          setActiveArticle(prevArticle => prevArticle + 1);
         }
       }
     });
@@ -24,8 +27,10 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Alan AI news app</h1>
-      <NewsCards articles={newsArticles} />
+      <center>
+        <h1>Alan AI news app</h1>
+      </center>
+      <NewsCards articles={newsArticles} activeArticle={activeArticle} />
     </div>
   );
 };
