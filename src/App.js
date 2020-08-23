@@ -42,9 +42,9 @@ const App = () => {
 
   return (
     <div className="app">
-      <center>
-        <h1>Alan AI news app</h1>
-      </center>
+      <div className="app__heading">
+        <p>Voice Controlled React News Application </p>
+      </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
     </div>
   );

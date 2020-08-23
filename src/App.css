@@ -1,2 +1,19 @@
-.app {
+.app__heading {
+  max-width: 500px;
+  min-height: 100px;
+  margin: 90px auto;
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* font-weight: lighter; */
+  font-size: 30px;
+  text-align: center;
+  background: linear-gradient(rgb(33, 190, 255), rgb(40 54 147));
+}
+
+body {
+  background: mintcream;
 }
