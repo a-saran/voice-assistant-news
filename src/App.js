@@ -30,10 +30,10 @@ const App = () => {
           const article = articles[parsedNumber - 1];
 
           if (parsedNumber > 20) {
-            alanBtn.playText("Please try that again");
+            alanBtn().playText("Please try that again");
           } else if (article) {
             window.open(article.url, "_blank");
-            alanBtn.playText("opening");
+            alanBtn().playText("opening");
           }
         }
       }
